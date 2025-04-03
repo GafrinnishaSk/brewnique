@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::get('landing', [LandingScreenController::class, 'index'])->name('landing.index');
 
+
 Route::get('home',[HomeScreenController::class,'index'])->name('home.index');
