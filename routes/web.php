@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeScreenController;
+use App\Http\Controllers\LandingScreenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingscreen.index');
 });
+
+Route::get('landing', [LandingScreenController::class, 'index'])->name('landing.index');
+
+Route::get('home',[HomeScreenController::class,'index'])->name('home.index');
