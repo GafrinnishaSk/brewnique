@@ -91,7 +91,7 @@
     <div class="menu">
         <h2>Our Coffee Menu</h2>
         <div class="menu-items">
-            <div class="menu-item">Espresso</div>
+            <div class="menu-item">God Coffee</div>
             <div class="menu-item">Cappuccino</div>
             <div class="menu-item">Latte</div>
             <div class="menu-item">Mocha</div>
