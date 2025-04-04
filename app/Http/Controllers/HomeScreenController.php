@@ -11,7 +11,7 @@ class HomeScreenController extends Controller
     {
         // Pass menu items to the view if needed
         $menuItems = [
-            'Espresso',
+            'God Coffee',
             'Cappuccino',
             'Latte',
             'Mocha',
