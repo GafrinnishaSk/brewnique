@@ -50,7 +50,7 @@
 <body>
     <div class="container">
         <h1>"Brewed with love, served with passion."</h1>
-        <a href="{{ route('home.index') }}" class="btn">Get Started</a>
+        <a href="{{ route('home.index') }}" class="btn">Started</a>
     </div>
 </body>
 
