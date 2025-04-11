@@ -17,7 +17,7 @@ jobs:
       - name: Setup SSH Key
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.brewnique_pem }}
+          ssh-private-key: ${{ secrets.PEM_KEY }}
 
       # Step-3: Add EC2 to Known Hosts
       - name: Add Server to Known Hosts
@@ -31,7 +31,7 @@ jobs:
         with:
           host: 44.194.64.5
           username: ubuntu
-          key: ${{ secrets.brewnique_pem }}
+          key: ${{ secrets.PEM_KEY }}
           port: 22
           script: |
             cd /var/www/html/brewnique
