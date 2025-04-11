@@ -17,21 +17,21 @@ jobs:
       - name: Setup SSH Key
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.PEM_KEY }}
+          ssh-private-key: ${{ secrets.brewnique.pem }}
 
       # Step-3: Add EC2 to Known Hosts
       - name: Add Server to Known Hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H 52.70.221.81 >> ~/.ssh/known_hosts
+          ssh-keyscan -H 44.194.64.5 >> ~/.ssh/known_hosts
 
       # Step-4: SSH into EC2 & Deploy Code
       - name: Deploy Code to the Server
         uses: appleboy/ssh-action@master
         with:
-          host: 52.70.221.81
+          host: 44.194.64.5
           username: ubuntu
-          key: ${{ secrets.PEM_KEY }}
+          key: ${{ secrets.brewnique.pem }}
           port: 22
           script: |
             cd /var/www/html/brewnique
