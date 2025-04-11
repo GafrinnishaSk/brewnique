@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class HomeScreenController extends Controller
@@ -9,20 +10,9 @@ class HomeScreenController extends Controller
 
     public function index()
     {
-        // Pass menu items to the view if needed
-        $menuItems = [
-            'God Coffee',
-            'Cappuccino',
-            'Latte',
-            'Mocha',
-            'Americano',
-            'Macchiato',
-            'Iced Coffee',
-            'Cold Brew',
-            'Hazelnut Coffee',
-            'Cold Coffee'
-        ];
+        // $menus = Menu::all();
+        $menus = Menu::latest()->take(5)->get();
 
-        return view('homescreen.index', compact('menuItems'));
+        return view('homescreen.index', compact('menus'));
     }
 }
